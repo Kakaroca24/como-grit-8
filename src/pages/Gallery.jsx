@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function Gallery() {
+  const { t } = useTranslation();
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
@@ -77,15 +79,15 @@ export default function Gallery() {
 
          <div className="text-center mb-12 sm:mb-20 animate-fadeInDown">
   <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-    Our Expertise in Every Detail
+    {t('galleryPageTitle')}
   </h1>
   <div className="w-20 h-1 bg-blue-600 mx-auto mb-6 animate-expandWidth"></div>
   <div className="text-base sm:text-lg text-slate-600 max-w-5xl mx-auto leading-relaxed px-4">
     <p className="mb-4">
-      Welcome to our gallery where you can see our precision, quality, and dedication to metal processing. Through years of experience, we have developed a wide range of products—from <span className="text-blue-600">metal structures</span> to <span className="text-blue-600">precisely manufactured components</span>—tailored to the specific requirements of our clients.
+      {t('galleryPageIntro1')} <span className="text-blue-600">{t('galleryPageIntro2')}</span> {t('galleryPageIntro3')} <span className="text-blue-600">{t('galleryPageIntro4')}</span>{t('galleryPageIntro5')}
     </p>
     <p>
-      Browse our portfolio to gain insight into the innovative solutions and superior material processing we apply to every project. Take a look at our work and see for yourself the quality of Como Grit d.o.o!
+      {t('galleryPageIntro6')}
     </p>
   </div>
 </div>
@@ -169,7 +171,7 @@ export default function Gallery() {
 
             <div className="absolute bottom-3 sm:bottom-6 left-1/2 -translate-x-1/2 bg-white/15 backdrop-blur-md px-3 sm:px-5 py-1.5 sm:py-2 rounded-full shadow-2xl z-20 border border-white/25 hover:border-white/40 transition-all animate-counterSlideUp">
               <p className="text-white text-sm sm:text-base font-semibold">
-                {currentIndex + 1} <span className="text-white/70 font-normal">of</span> {galleryImages.length}
+                {currentIndex + 1} <span className="text-white/70 font-normal">{t('galleryImageCounter')}</span> {galleryImages.length}
               </p>
             </div>
 

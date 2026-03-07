@@ -1,7 +1,9 @@
 import { useState } from 'react';
 import { Phone, Mail, MapPin, Building2, Instagram, Facebook, MessageCircle, CircleCheck as CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export default function ContactUs() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -51,11 +53,11 @@ export default function ContactUs() {
 
           <div className="text-center mb-16 sm:mb-24 animate-fadeInUp">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
-              Contact Us Now
+              {t('contactPageTitle')}
             </h1>
             <div className="w-20 h-1 bg-blue-600 mx-auto mb-6 animate-expandWidth"></div>
             <p className="text-base sm:text-lg text-slate-600 max-w-2xl mx-auto leading-relaxed px-4">
-              Contact our team to discuss your next project or schedule a consultation
+              {t('contactPageSubtitle')}
             </p>
           </div>
 
@@ -64,20 +66,20 @@ export default function ContactUs() {
             <div className="bg-slate-50 border-2 border-slate-200 rounded-xl shadow-lg p-6 sm:p-8 hover:border-blue-600 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-slideInLeft">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
                 <div className="w-1 h-6 bg-blue-600 animate-expandHeight"></div>
-                Send us a message
+                {t('contactFormTitle')}
               </h2>
 
               {submitted ? (
                 <div className="bg-green-50 border-2 border-green-500 rounded-lg p-8 text-center animate-bounceIn">
                   <CheckCircle2 className="w-12 h-12 text-green-600 mx-auto mb-2" />
-                  <h3 className="text-2xl font-bold text-green-800 mb-2">Thank You!</h3>
-                  <p className="text-green-700">We've received your message and will get back to you soon.</p>
+                  <h3 className="text-2xl font-bold text-green-800 mb-2">{t('thankYouFormTitle')}</h3>
+                  <p className="text-green-700">{t('thankYouFormMessage')}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4 animate-fadeInUp" style={{ animationDelay: '0.3s' }}>
                   <div className="animate-fadeInUp" style={{ animationDelay: '0.35s' }}>
                     <label htmlFor="fullName" className="block text-sm font-semibold text-slate-900 mb-2">
-                      Full Name *
+                      {t('fullNameLabel')}
                     </label>
                     <input
                       type="text"
@@ -87,13 +89,13 @@ export default function ContactUs() {
                       value={formData.fullName}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/30 focus:outline-none transition-all duration-300"
-                      placeholder="Enter your full name"
+                      placeholder={t('fullNamePlaceholder')}
                     />
                   </div>
 
                   <div className="animate-fadeInUp" style={{ animationDelay: '0.4s' }}>
                     <label htmlFor="email" className="block text-sm font-semibold text-slate-900 mb-2">
-                      Email Address *
+                      {t('emailLabel')}
                     </label>
                     <input
                       type="email"
@@ -103,13 +105,13 @@ export default function ContactUs() {
                       value={formData.email}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/30 focus:outline-none transition-all duration-300"
-                      placeholder="email@example.com"
+                      placeholder={t('emailPlaceholder')}
                     />
                   </div>
 
                   <div className="animate-fadeInUp" style={{ animationDelay: '0.45s' }}>
                     <label htmlFor="subject" className="block text-sm font-semibold text-slate-900 mb-2">
-                      Subject *
+                      {t('subjectLabel')}
                     </label>
                     <input
                       type="text"
@@ -119,13 +121,13 @@ export default function ContactUs() {
                       value={formData.subject}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/30 focus:outline-none transition-all duration-300"
-                      placeholder="What is the subject?"
+                      placeholder={t('subjectPlaceholder')}
                     />
                   </div>
 
                   <div className="animate-fadeInUp" style={{ animationDelay: '0.5s' }}>
                     <label htmlFor="message" className="block text-sm font-semibold text-slate-900 mb-2">
-                      Message *
+                      {t('messageTextLabel')}
                     </label>
                     <textarea
                       id="message"
@@ -135,7 +137,7 @@ export default function ContactUs() {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border-2 border-slate-300 rounded-lg bg-white text-slate-900 placeholder-slate-500 focus:border-blue-600 focus:ring-2 focus:ring-blue-600/30 focus:outline-none transition-all duration-300 resize-none"
-                      placeholder="Tell us more about your project..."
+                      placeholder={t('messageTextPlaceholder')}
                     />
                   </div>
 
@@ -144,7 +146,7 @@ export default function ContactUs() {
                     className="w-full bg-blue-600 hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-bold transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-105 active:scale-95 mt-6 animate-fadeInUp animate-pulse-soft"
                     style={{ animationDelay: '0.6s' }}
                   >
-                    Send Message
+                    {t('sendButtonText')}
                   </button>
                 </form>
               )}
@@ -153,7 +155,7 @@ export default function ContactUs() {
             <div className="bg-slate-50 border-2 border-slate-200 rounded-xl shadow-lg p-6 sm:p-8 hover:border-blue-600 transition-all duration-500 hover:shadow-2xl hover:scale-[1.02] animate-slideInRight">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-8 flex items-center gap-3 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
                 <div className="w-1 h-6 bg-blue-600 animate-expandHeight"></div>
-                Contact Information
+                {t('contactInfoTitle')}
               </h2>
 
               <div className="space-y-6">
@@ -164,7 +166,7 @@ export default function ContactUs() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">Address</h3>
+                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">{t('addressLabel')}</h3>
                     <p className="text-slate-600 text-xs sm:text-sm">{contactInfo.address}</p>
                   </div>
                 </div>
@@ -176,7 +178,7 @@ export default function ContactUs() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">Phone</h3>
+                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">{t('phoneLabel')}</h3>
                     <a href={`tel:${contactInfo.phone}`} className="text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium transition-colors">
                       {contactInfo.phone}
                     </a>
@@ -190,7 +192,7 @@ export default function ContactUs() {
                     </div>
                   </div>
                   <div>
-                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">Email</h3>
+                    <h3 className="font-bold text-slate-900 mb-1 text-sm sm:text-base">{t('emailContactLabel')}</h3>
                     <a href={`mailto:${contactInfo.email}`} className="text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium transition-colors">
                       {contactInfo.email}
                     </a>
@@ -204,7 +206,7 @@ export default function ContactUs() {
             <div className="p-6 sm:p-8 border-b-2 border-slate-200 bg-white">
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 flex items-center gap-3 mb-2 animate-fadeInUp" style={{ animationDelay: '0.2s' }}>
                 <MapPin className="w-6 h-6 text-blue-600" />
-                Our Location
+                {t('ourLocationTitle')}
               </h2>
               <p className="text-slate-600 text-xs sm:text-sm mt-2">Rooseveltova 12, 21000 Split, Croatia</p>
             </div>

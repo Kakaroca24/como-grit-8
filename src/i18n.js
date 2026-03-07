@@ -173,7 +173,12 @@ const resources = {
 
       footerDesc: "Precizna obrada metala i industrijska rješenja uz vrhunsku tehnologiju i stručnu izradu.",
       footerQuickLinks: "Brze poveznice",
-      
+      footerHome: "Početna",
+      footerAbout: "O nama",
+      footerServices: "Usluge",
+      footerContact: "Kontakt",
+      Gallery: "Galerija",
+
       footerServiceList: [
         "Metalna konstrukcija",
         "Lasersko rezanje",
@@ -182,7 +187,169 @@ const resources = {
         "Obrada metala",
         "Obrada i dorada metala"
       ],
-      copyright: "Sva prava pridržana."
+      copyright: "Sva prava pridržana.",
+
+      // Contact Page
+      contactPageTitle: "Kontaktirajte nas odmah",
+      contactPageSubtitle: "Kontaktirajte naš tim kako biste razgovarali o svom sljedećem projektu ili zakazali konzultacije",
+      contactFormTitle: "Pošaljite nam poruku",
+      contactInfoTitle: "Kontakt informacije",
+      fullNameLabel: "Puno ime *",
+      fullNamePlaceholder: "Unesite svoje puno ime",
+      emailLabel: "Email adresa *",
+      emailPlaceholder: "email@primjer.com",
+      subjectLabel: "Predmet *",
+      subjectPlaceholder: "Koji je predmet?",
+      messageTextLabel: "Poruka *",
+      messageTextPlaceholder: "Recite nam više o svom projektu...",
+      sendButtonText: "Pošalji poruku",
+      thankYouFormTitle: "Hvala!",
+      thankYouFormMessage: "Primili smo vašu poruku i javit ćemo vam se uskoro.",
+      addressLabel: "Adresa",
+      phoneLabel: "Telefon",
+      emailContactLabel: "Email",
+      ourLocationTitle: "Naša lokacija",
+
+      // Gallery Page
+      galleryPageTitle: "Naša stručnost u svakom detalju",
+      galleryPageIntro1: "Dobrodošli u našu galeriju gdje možete vidjeti našu preciznost, kvalitetu i predanost obradi metala. Kroz godine iskustva razvili smo širok asortiman proizvoda—od",
+      galleryPageIntro2: "metalnih konstrukcija",
+      galleryPageIntro3: "do",
+      galleryPageIntro4: "precizno izrađenih komponenti",
+      galleryPageIntro5: "—prilagođenih specifičnim zahtjevima naših klijenata.",
+      galleryPageIntro6: "Pregledajte naš portfolio kako biste stekli uvid u inovativna rješenja i vrhunsku obradu materijala koju primjenjujemo na svakom projektu. Pogledajte naš rad i uvjerite se sami u kvalitetu Como Grit d.o.o!",
+      galleryImageCounter: "od"
+    }
+  },
+  de: {
+    translation: {
+      // Header
+      nav: { about: "Über uns", services: "Dienstleistungen", projects: "Projekte", contact: "Kontakt" },
+
+      // Hero
+      heroTitle: "Präzise Metallfertigung & Industrielle Lösungen",
+      heroText: "Fortschrittliche Metallverarbeitungs- und Schneidtechnologien für außergewöhnliche Qualität und Präzision Ihrer Industrieprojekte",
+      requestQuote: "Angebot anfordern",
+
+      // About
+      aboutTitle: "Über COMO GRIT",
+      aboutText1: "Mit jahrzehntelanger Erfahrung in der Metallfertigung ist COMO GRIT ein vertrauenswürdiger Partner für präzise Metallarbeiten und industrielle Lösungen. Unser Engagement für Exzellenz treibt alles an, was wir tun, von der ersten Beratung bis zur finalen Lieferung.",
+      aboutText2: "Wir kombinieren traditionelle Handwerkskunst mit modernster Technologie, um überlegene Ergebnisse zu erzielen. Unsere hochmoderne Ausrüstung, einschließlich fortschrittlicher Laser- und Wasserstrahlschneidsysteme, stellt sicher, dass jedes Projekt höchste Qualitäts- und Präzisionsstandards erfüllt.",
+
+      // Services
+      servicesTitle: "Unsere Dienstleistungen",
+      servicesSubtitle: "Umfassende Metallfertigung und Verarbeitungslösungen, die auf Ihre industriellen Bedürfnisse zugeschnitten sind",
+      services: [
+        { title: "Metallkonstruktion", description: "Stahlbauarbeiten und maßgeschneiderte Metallkonstruktion für industrielle und kommerzielle Anwendungen" },
+        { title: "Metallumformung", description: "Präzises Biegen, Walzen und Formen für komplexe Metallkomponenten" },
+        { title: "Eisen- & Aluminiumschmelze", description: "Hochkapazitätsschmelzanlagen für Eisen- und Nichteisenmetallverarbeitung" },
+        { title: "Metallguss", description: "Fortschrittliche Gießtechniken zur Herstellung komplexer Metallteile mit außergewöhnlichem Detail" },
+        { title: "Laserschneiden", description: "Hochpräzises Laserschneiden für komplizierte Designs und enge Toleranzen" },
+        { title: "Wasserstrahlschneiden", description: "Vielseitige Schneidlösung für hitzeempfindliche Materialien und dicke Metalle" }
+      ],
+
+      // WhyChooseUs
+      whyChooseUsTitle: "Warum COMO GRIT wählen",
+      whyChooseUsSubtitle: "Branchenführende Fähigkeiten, unterstützt durch jahrelange Expertise",
+      whyChooseUsFeatures: [
+        { title: "Hochpräzise Maschinen", description: "Modernste Ausrüstung mit Genauigkeit bis zum Mikron" },
+        { title: "Industrielle Materialien", description: "Nur die besten Metalle und Legierungen für überlegene Haltbarkeit" },
+        { title: "Schnelle Bearbeitung", description: "Effiziente Prozesse zur Einhaltung Ihrer Fristen ohne Qualitätskompromisse" },
+        { title: "Maßgeschneiderte Lösungen", description: "Maßgeschneiderte Fertigungsdienstleistungen nach Ihren genauen Spezifikationen" },
+        { title: "Erfahrene Techniker", description: "Erfahrene Fachleute mit Expertise in fortgeschrittener Metallbearbeitung" }
+      ],
+
+      // Gallery
+      galleryTitle: "Unsere Projekte",
+      gallerySubtitle: "Eine Präsentation unserer Präzisionsmetallarbeiten und industriellen Fertigungsfähigkeiten",
+      galleryProjects: [
+        { title: "Stahlbauarbeiten", image: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=800" },
+        { title: "Laserschneidprojekt", image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" },
+        { title: "Maßgefertigte Metallfertigung", image: "https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=800" },
+        { title: "Industrielle Komponenten", image: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" },
+        { title: "Präzisionsschneiden", image: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" },
+        { title: "Metallverarbeitung", image: "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg?auto=compress&cs=tinysrgb&w=800" }
+      ],
+
+      // QuoteForm
+      quoteTitle: "Angebot anfordern",
+      quoteSubtitle: "Erzählen Sie uns von Ihrem Projekt und wir melden uns mit einem detaillierten Angebot",
+      fullName: "Vollständiger Name *",
+      emailAddress: "E-Mail-Adresse *",
+      phoneNumber: "Telefonnummer *",
+      projectDescription: "Projektbeschreibung *",
+      descriptionPlaceholder: "Bitte beschreiben Sie Ihre Projektanforderungen, Materialien, Abmessungen und spezifische Details...",
+      submitRequest: "Anfrage senden",
+      quoteThankYouTitle: "Vielen Dank!",
+      quoteThankYouMessage: "Wir haben Ihre Anfrage erhalten und werden uns in Kürze bei Ihnen melden.",
+
+      // Contact
+      contactTitle: "Kontakt",
+      contactSubtitle: "Nehmen Sie Kontakt mit unserem Team auf, um Ihre Metallfertigung zu besprechen",
+      sendMessage: "Nachricht senden",
+      sendMessageTitle: "Senden Sie uns eine Nachricht",
+      thankYouTitle: "Vielen Dank!",
+      thankYouMessage: "Wir haben Ihre Nachricht erhalten und werden uns bald bei Ihnen melden.",
+      messageLabel: "Nachricht *",
+      messagePlaceholder: "Erzählen Sie uns von Ihrer Anfrage...",
+      businessHoursTitle: "Geschäftszeiten",
+      mondayFriday: "Montag - Freitag:",
+      mondayFridayTime: "7:00 - 18:00",
+      saturday: "Samstag:",
+      saturdayTime: "8:00 - 14:00",
+      sunday: "Sonntag:",
+      sundayTime: "Geschlossen",
+
+      // Footer
+      footerDesc: "Präzise Metallfertigung und industrielle Lösungen mit modernster Technologie und fachmännischer Handwerkskunst.",
+      footerQuickLinks: "Schnelllinks",
+      footerHome: "Startseite",
+      footerAbout: "Über uns",
+      footerServices: "Dienstleistungen",
+      footerProjects: "Projekte",
+      footerContact: "Kontakt",
+      Gallery: "Galerie",
+      footerOurServices: "Unsere Dienstleistungen",
+      footerServiceList: [
+        "Metallkonstruktion",
+        "Laserschneiden",
+        "Wasserstrahlschneiden",
+        "Metallguss",
+        "Metallumformung",
+        "Metallverarbeitung"
+      ],
+      copyright: "Alle Rechte vorbehalten.",
+
+      // Contact Page
+      contactPageTitle: "Kontaktieren Sie uns jetzt",
+      contactPageSubtitle: "Kontaktieren Sie unser Team, um Ihr nächstes Projekt zu besprechen oder eine Beratung zu vereinbaren",
+      contactFormTitle: "Senden Sie uns eine Nachricht",
+      contactInfoTitle: "Kontaktinformationen",
+      fullNameLabel: "Vollständiger Name *",
+      fullNamePlaceholder: "Geben Sie Ihren vollständigen Namen ein",
+      emailLabel: "E-Mail-Adresse *",
+      emailPlaceholder: "email@beispiel.com",
+      subjectLabel: "Betreff *",
+      subjectPlaceholder: "Was ist der Betreff?",
+      messageTextLabel: "Nachricht *",
+      messageTextPlaceholder: "Erzählen Sie uns mehr über Ihr Projekt...",
+      sendButtonText: "Nachricht senden",
+      thankYouFormTitle: "Vielen Dank!",
+      thankYouFormMessage: "Wir haben Ihre Nachricht erhalten und werden uns bald bei Ihnen melden.",
+      addressLabel: "Adresse",
+      phoneLabel: "Telefon",
+      emailContactLabel: "E-Mail",
+      ourLocationTitle: "Unser Standort",
+
+      // Gallery Page
+      galleryPageTitle: "Unsere Expertise in jedem Detail",
+      galleryPageIntro1: "Willkommen in unserer Galerie, wo Sie unsere Präzision, Qualität und Hingabe zur Metallverarbeitung sehen können. Durch jahrelange Erfahrung haben wir eine breite Palette von Produkten entwickelt—von",
+      galleryPageIntro2: "Metallkonstruktionen",
+      galleryPageIntro3: "bis zu",
+      galleryPageIntro4: "präzise gefertigten Komponenten",
+      galleryPageIntro5: "—angepasst an die spezifischen Anforderungen unserer Kunden.",
+      galleryPageIntro6: "Durchsuchen Sie unser Portfolio, um Einblicke in die innovativen Lösungen und die überlegene Materialverarbeitung zu erhalten, die wir bei jedem Projekt anwenden. Werfen Sie einen Blick auf unsere Arbeit und überzeugen Sie sich selbst von der Qualität von Como Grit d.o.o!",
+      galleryImageCounter: "von"
     }
   }
 };
