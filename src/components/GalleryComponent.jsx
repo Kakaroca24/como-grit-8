@@ -1,55 +1,55 @@
-import React from 'react';
+import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
+import gallery1 from "../assets/gallery7.webp";
+import gallery2 from "../assets/gallery8.webp";
+import image3 from '../assets/image3.webp'
+import gallery4 from "../assets/gallery5.webp";
+
 export default function GalleryPreview() {
   const { t } = useTranslation();
-  // Assuming this returns an array of projects
-  const projects = t("galleryProjects", { returnObjects: true }) || [];
+
+  const images = [gallery1, gallery2, image3, gallery4];
 
   return (
-    <section id="gallery" className="py-24 bg-slate-50">
-      <div className="max-w-7xl mx-auto px-6">
-        
+    <section id="gallery" className="py-20 bg-slate-50">
+      <div className="max-w-6xl mx-auto px-6">
+
         {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-slate-900 mb-6 uppercase tracking-tight">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-slate-900 mb-4 uppercase tracking-tight">
             {t("galleryTitle")}
           </h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
-          <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            {t("gallerySubtitle")}
-          </p>
+          <div className="w-16 h-1 bg-blue-600 mx-auto mb-4"></div>
+        
         </div>
 
-        {/* Gallery Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {projects.map((project, idx) => (
-            <div 
-              key={idx} 
-              className="group relative overflow-hidden aspect-square rounded-xl cursor-pointer shadow-sm hover:shadow-2xl transition-all duration-500"
+        {/* Gallery */}
+        <div className="grid grid-cols-2 gap-5 max-w-4xl mx-auto">
+          {images.map((image, idx) => (
+            <div
+              key={idx}
+              className="relative overflow-hidden rounded-lg h-60"
             >
-              {/* Image only - No opacity filters, just smooth zoom */}
               <img
-                src={project.image}
-                alt={project.title || "Gallery Image"}
-                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out transform-gpu group-hover:scale-110"
+                src={image}
+                alt={`Gallery ${idx + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
           ))}
         </div>
 
-        {/* Call to Action Button */}
-        <div className="mt-16 flex justify-center">
+        {/* Button */}
+        <div className="mt-12 flex justify-center">
           <Link
             to="/gallery"
-            className="group relative overflow-hidden bg-slate-900 text-white px-8 py-4 rounded-lg text-lg font-bold hover:bg-blue-600 transition-colors duration-300 shadow-lg active:scale-95 inline-flex items-center gap-3 border border-transparent hover:border-blue-500"
+            className="bg-slate-900 text-white px-7 py-3 rounded-lg text-sm font-bold hover:bg-blue-600 transition flex items-center gap-2"
           >
-            <span className="relative z-10 uppercase tracking-wider text-sm">
-              {t("exploreMore", "Explore More Projects")}
-            </span>
-            <ArrowRight className="relative z-10 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            {t("exploreMore", "Explore More Projects")}
+            <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
 

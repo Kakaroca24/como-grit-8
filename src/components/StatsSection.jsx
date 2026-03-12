@@ -57,25 +57,25 @@ const StatsSection = () => {
   }, []);
 
   const stats = [
-    { value: "18", label: "Years of Experience", suffix: "+" },
-    { value: "32", label: "Employees", suffix: "" },
-    { value: "150", label: "Clients", suffix: "+" },
-    { value: "1000", label: "Projects", suffix: "+" }
+    { value: "4", label: t("yearsExperience"), suffix: "+" },
+    { value: "100", label: t("successRate"), suffix: "%" },
+    { value: "200", label: t("clients"), suffix: "+" },
+    { value: "200", label: t("projects"), suffix: "+" }
   ];
 
   return (
     <section ref={sectionRef} className="bg-[#1a1c1e] py-20 text-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          
+
           {/* Left Side: Text Content */}
           <div className={`max-w-xl transition-all duration-1000 ${hasInview ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
             <h2 className="text-4xl font-bold mb-6 leading-tight">
-              Experience and Customer Satisfaction
+              {t("statsTitle")}
             </h2>
             <div className="w-16 h-1 bg-blue-600 mb-8"></div>
             <p className="text-slate-400 text-lg leading-relaxed">
-              Our expertise, precision, and dedication to quality make us a trusted partner for clients across multiple industrial sectors.
+              {t("statsDescription")}
             </p>
           </div>
 

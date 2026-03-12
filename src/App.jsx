@@ -7,7 +7,7 @@ import AboutUs from './pages/AboutUs'
 import Services from './pages/Services'
 import Gallery from './pages/Gallery'
 import ContactUs from './pages/ContactUs'
-
+import Construction from "./pages/Construction"
 import 'flag-icons/css/flag-icons.min.css'
 
 export default function App() {
@@ -21,6 +21,7 @@ export default function App() {
         <Route path="/Services" element={<Services />} />
         <Route path="/Gallery" element={<Gallery />} />
         <Route path="/Contact" element={<ContactUs />} />
+        <Route path="/Construction" element={<Construction />} />
 
       </Routes>
 <Footer />

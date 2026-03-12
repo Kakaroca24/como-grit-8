@@ -1,6 +1,21 @@
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, X, ZoomIn } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import Gallery2 from '../assets/gallery2.webp'
+import Gallery3 from '../assets/gallery3.webp'
+import Gallery4 from '../assets/gallery4.webp'
+import Gallery5 from '../assets/gallery5.webp'
+import Gallery6 from '../assets/gallery6.webp'
+import Gallery7 from '../assets/gallery7.webp'
+import Gallery8 from '../assets/gallery8.webp'
+import Gallery9 from '../assets/gallery9.webp'
+import Gallery10 from '../assets/gallery10.webp'
+import Gallery11 from '../assets/gallery11.webp'
+import Gallery12 from '../assets/gallery12.webp'
+import Gallery21 from '../assets/image18.webp'
+import Gallery22 from '../assets/image19.webp'
+import Gallery23 from '../assets/image4.webp'
+
 
 export default function Gallery() {
   const { t } = useTranslation();
@@ -8,29 +23,27 @@ export default function Gallery() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
 
-  const galleryImages = [
-    { id: 1, title: "Industrial Equipment Setup", category: "Manufacturing", url: "https://images.pexels.com/photos/4195325/pexels-photo-4195325.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 2, title: "Precision Machinery", category: "Equipment", url: "https://images.pexels.com/photos/3962285/pexels-photo-3962285.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 3, title: "Workshop Operations", category: "Production", url: "https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 4, title: "Quality Control", category: "Testing", url: "https://images.pexels.com/photos/3962286/pexels-photo-3962286.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 5, title: "Advanced Technology", category: "Innovation", url: "https://images.pexels.com/photos/8439046/pexels-photo-8439046.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 6, title: "Factory Floor", category: "Manufacturing", url: "https://images.pexels.com/photos/4195326/pexels-photo-4195326.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 7, title: "Finished Products", category: "Products", url: "https://images.pexels.com/photos/3962287/pexels-photo-3962287.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 8, title: "Team Collaboration", category: "Team", url: "https://images.pexels.com/photos/3945682/pexels-photo-3945682.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 9, title: "Technical Assembly", category: "Production", url: "https://images.pexels.com/photos/4195327/pexels-photo-4195327.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 10, title: "Project Showcase", category: "Projects", url: "https://images.pexels.com/photos/3962288/pexels-photo-3962288.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 11, title: "Design Process", category: "Development", url: "https://images.pexels.com/photos/8439047/pexels-photo-8439047.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 12, title: "Final Inspection", category: "Quality", url: "https://images.pexels.com/photos/4195328/pexels-photo-4195328.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 13, title: "Metal Fabrication", category: "Manufacturing", url: "https://images.pexels.com/photos/1267338/pexels-photo-1267338.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 14, title: "Welding Operations", category: "Production", url: "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 15, title: "Quality Assurance", category: "Testing", url: "https://images.pexels.com/photos/585419/pexels-photo-585419.jpeg?auto=compress&cs=tinysrgb&w=800" },
-    { id: 16, title: "Modern Facility", category: "Infrastructure", url: "https://images.pexels.com/photos/1094767/pexels-photo-1094767.jpeg?auto=compress&cs=tinysrgb&w=800" }
-  ];
+const galleryImages = [
+  { id: 2, url: Gallery2 },
+  { id: 3, url: Gallery3 },
+  { id: 4, url: Gallery4 },
+  { id: 5, url: Gallery5 },
+  { id: 6, url: Gallery6 },
+  { id: 7, url: Gallery7 },
+  { id: 8, url: Gallery8 },
+  { id: 9, url: Gallery9 },
+  { id: 10, url: Gallery10 },
+  { id: 11, url: Gallery11 },
+  { id: 12, url: Gallery12 },
+  
+{ id: 21, url: Gallery21 },
+  { id: 22, url: Gallery22 },
+  { id: 23, url: Gallery23 },
+];
 
   const handleImageClick = (index) => {
     setCurrentIndex(index);
     setSelectedImage(galleryImages[index]);
-    document.body.style.overflow = 'hidden';
   };
 
   const handleNext = (e) => {
@@ -82,7 +95,7 @@ export default function Gallery() {
     {t('galleryPageTitle')}
   </h1>
   <div className="w-20 h-1 bg-blue-600 mx-auto mb-6 animate-expandWidth"></div>
-  <div className="text-base sm:text-lg text-slate-600 max-w-5xl mx-auto leading-relaxed px-4">
+  <div className="text-base sm:text-lg text-slate-600  max-w-5xl mx-auto leading-relaxed px-4">
     <p className="mb-4">
       {t('galleryPageIntro1')} <span className="text-blue-600">{t('galleryPageIntro2')}</span> {t('galleryPageIntro3')} <span className="text-blue-600">{t('galleryPageIntro4')}</span>{t('galleryPageIntro5')}
     </p>

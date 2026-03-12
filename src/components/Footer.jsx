@@ -5,6 +5,8 @@ import Logo from "../assets/Logo.png";
 export default function Footer() {
   const { t } = useTranslation();
 
+  const services = t("footerServiceList", { returnObjects: true });
+
   return (
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-6 py-12">
@@ -34,7 +36,6 @@ export default function Footer() {
             </h3>
 
             <div className="space-y-2">
-
               <Link
                 to="/"
                 className="block text-slate-400 hover:text-white transition-colors"
@@ -43,7 +44,7 @@ export default function Footer() {
               </Link>
 
               <Link
-                to="/About"
+                to="/about"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
                 {t("footerAbout")}
@@ -57,54 +58,92 @@ export default function Footer() {
               </Link>
 
               <Link
-                to="/Gallery"
+                to="/gallery"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
                 {t("Gallery")}
               </Link>
+                 <Link
+                to="/construction"
+                className="block text-slate-400 hover:text-white transition-colors"
+              >
+                {t("footerBuildingConstriction")}
+              </Link>
 
               <Link
-                to="/Contact"
+                to="/contact"
                 className="block text-slate-400 hover:text-white transition-colors"
               >
                 {t("footerContact")}
               </Link>
-
             </div>
           </div>
 
           {/* Services */}
-         <div>
-  <h3 className="text-lg font-bold mb-4">Our Services</h3>
+          <div>
+            <h3 className="text-lg font-bold mb-4">
+              {t("footerOurServices")}
+            </h3>
 
-  <ul className="space-y-2 text-slate-400 ">
-    <li className="hover:text-white transition-colors">Metal Construction
-</li>
-    <li className="hover:text-white transition-colors">Laser Cutting
-</li>
-    <li className="hover:text-white transition-colors">Water Jet Cutting
-</li>
-    <li className="hover:text-white transition-colors">Metal Casting
-</li>
-    <li className="hover:text-white transition-colors">Metal Forming
-</li>
-<li className="hover:text-white transition-colors">Metal Processing
-</li>
-  </ul>
-</div>
+            <ul className="space-y-2 text-slate-400">
+              {services.map((service, index) => (
+                <li
+                  key={index}
+                  className="hover:text-white transition-colors"
+                >
+                  {service}
+                </li>
+              ))}
+            </ul>
+          </div>
 
- <div>
-  <h3 className="text-lg font-bold mb-4">Contact Information</h3>
+          {/* Contact Information */}
+          <div>
+            <h3 className="text-lg font-bold mb-4">
+              {t("contactInfoTitle")}
+            </h3>
 
-  <ul className="space-y-2 text-slate-400">
-        <li> <a className="text-white transition-colors bold font-medium">Como Grit d.o.o</a></li>
+            <ul className="space-y-2 text-slate-400">
+              <li>
+                <span className="text-white font-medium">
+                  Como Grit d.o.o
+                </span>
+              </li>
 
-    <li>Email: <a className="hover:text-white transition-colors">service@comogrit.com</a></li>
-    <li>Phone: <a className="hover:text-white transition-colors">+1 111 111 111</a></li>
-        <li>Address: <a className="hover:text-white transition-colors">Rooseveltova 12, 21000 Split</a></li>
+              <li>
+                {t("emailContactLabel")}:{" "}
+                <a className="hover:text-white transition-colors">
+                  service@comogrit.com
+                </a>
+              </li>
+<li>
+  {t("phoneLabel")}:
+</li>
 
-  </ul>
-</div>
+<li>
+  <a className="hover:text-white transition-colors">
+    +385 99 500 1059
+  </a>
+</li>
+<li>
+  <a className="hover:text-white transition-colors">
+    +385 99 500 1038
+  </a>
+</li>
+<li>
+  <a className="hover:text-white transition-colors">
+    +385 99 500 1037
+  </a>
+</li>
+
+              <li>
+                {t("addressLabel")}:{" "}
+                <a className="hover:text-white transition-colors">
+                  Rooseveltova 12, 21000 Split
+                </a>
+              </li>
+            </ul>
+          </div>
 
         </div>
 
