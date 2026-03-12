@@ -1,32 +1,57 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
+import { useParams } from "react-router-dom"
 
-import Header from "./components/Header"
 import Footer from './components/Footer'
-import Home from './pages/Home'
-import AboutUs from './pages/AboutUs'
-import Services from './pages/Services'
-import Gallery from './pages/Gallery'
-import ContactUs from './pages/ContactUs'
-import Construction from "./pages/Construction"
+import NavbarEN from './components/NavbarEN'
+import NavbarDE from './components/NavbarDE'
+import NavbarHR from './components/NavbarHR'
+
+import HomeEN from './pages/en/Home'
+import HomeDE from './pages/de/Home'
+import HomeHR from './pages/hr/Home'
+
 import 'flag-icons/css/flag-icons.min.css'
+
+const navbars = {
+  en: NavbarEN,
+  de: NavbarDE,
+  hr: NavbarHR
+}
+
+const pages = {
+  en: {
+    home: HomeEN
+  },
+  de: {
+    home: HomeDE
+  },
+  hr: {
+    home: HomeHR
+  }
+}
+
+function LanguageWrapper() {
+  const { lang } = useParams()
+  const NavBar = navbars[lang] || NavbarEN
+  const pagesToUse = pages[lang] || pages.en
+
+  return (
+    <div>
+      <NavBar />
+      <Routes>
+        <Route path="" element={<pagesToUse.home />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
+}
 
 export default function App() {
   return (
-    <div>
-     
-<Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/About" element={<AboutUs />} />
-        <Route path="/Services" element={<Services />} />
-        <Route path="/Gallery" element={<Gallery />} />
-        <Route path="/Contact" element={<ContactUs />} />
-        <Route path="/Construction" element={<Construction />} />
-
-      </Routes>
-<Footer />
-     
-
-    </div>
+    <Routes>
+      <Route path="/:lang/*" element={<LanguageWrapper />} />
+      <Route path="/" element={<Navigate to="/en" replace />} />
+      <Route path="*" element={<Navigate to="/en" replace />} />
+    </Routes>
   )
 }
